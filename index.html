@@ -65,7 +65,7 @@ main { max-width: 640px; margin: 0 auto; padding: 14px 14px 40px; }
 .day-mon { font-size: 10px; color: var(--ink-light); }
 .day-info { flex: 1; min-width: 0; }
 .day-title { font-weight: 600; font-size: 15px; color: var(--ink); margin-bottom: 2px; }
-.day-summary { font-size: 11px; color: var(--ink-light); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.day-summary { font-size: 11px; color: var(--ink-light); line-height: 1.45; margin-top:1px; }
 .day-badge { display: inline-block; padding: 3px 8px; border-radius: 20px; font-size: 10px; font-weight: 600; text-transform: uppercase; white-space: nowrap; flex-shrink: 0; }
 .badge-golf { background: var(--green-pale); color: var(--green); }
 .badge-travel { background: #fff3cd; color: #7a5a00; }
@@ -165,8 +165,8 @@ main { max-width: 640px; margin: 0 auto; padding: 14px 14px 40px; }
 <div class="day-card" onclick="toggleDay(this)">
   <div class="day-header">
     <div class="day-date-block"><div class="day-weekday">Sat</div><div class="day-num">13</div><div class="day-mon">June</div></div>
-    <div class="day-info"><div class="day-title">Edinburgh</div><div class="day-summary">Land · Oink · Witchery 5pm · Panda &amp; Sons 7:30pm</div></div>
-    <span class="day-badge badge-travel">Travel</span><span class="chevron">▾</span>
+    <div class="day-info"><div class="day-title">Edinburgh</div><div class="day-summary">Redeye landing. First taste of Scotland — hog roast on the Royal Mile, candlelit dinner at the castle gates, nightcap at the world's best bar.</div></div>
+    <span class="day-badge badge-travel">Tour</span><span class="chevron">▾</span>
   </div>
   <div class="day-body">
     <div class="event" onclick="toggleEvent(event,this)">
@@ -218,8 +218,8 @@ main { max-width: 640px; margin: 0 auto; padding: 14px 14px 40px; }
 <div class="day-card" onclick="toggleDay(this)">
   <div class="day-header">
     <div class="day-date-block"><div class="day-weekday">Sun</div><div class="day-num">14</div><div class="day-mon">June</div></div>
-    <div class="day-info"><div class="day-title">Drive to St Andrews</div><div class="day-summary">Grocery run · Settle in · Dinner at 18</div></div>
-    <span class="day-badge badge-travel">Drive</span><span class="chevron">▾</span>
+    <div class="day-info"><div class="day-title">Drive to St Andrews</div><div class="day-summary">Cross the Forth into the Kingdom of Fife. Find the apartment, walk the Old Course on a Sunday, watch the sun set from the rooftop at Rusacks.</div></div>
+    <span class="day-badge badge-travel">Settle</span><span class="chevron">▾</span>
   </div>
   <div class="day-body">
     <div class="event" onclick="toggleEvent(event,this)">
@@ -245,7 +245,7 @@ main { max-width: 640px; margin: 0 auto; padding: 14px 14px 40px; }
 <div class="day-card" onclick="toggleDay(this)">
   <div class="day-header">
     <div class="day-date-block"><div class="day-weekday">Mon</div><div class="day-num">15</div><div class="day-mon">June</div></div>
-    <div class="day-info"><div class="day-title">Carnoustie</div><div class="day-summary">Rookery 12pm · Tee 3:30pm · Casual dinner</div></div>
+    <div class="day-info"><div class="day-title">Carnoustie</div><div class="day-summary">Golf's Greatest Test. Lunch with a panoramic view, then Carnoustie in the afternoon — the Barry Burn, Hogan's Alley, and the hole Van de Velde made famous.</div></div>
     <span class="day-badge badge-golf">Golf</span><span class="chevron">▾</span>
   </div>
   <div class="day-body">
@@ -276,8 +276,8 @@ main { max-width: 640px; margin: 0 auto; padding: 14px 14px 40px; }
 <div class="day-card" onclick="toggleDay(this)">
   <div class="day-header">
     <div class="day-date-block"><div class="day-weekday">Tue</div><div class="day-num">16</div><div class="day-mon">June</div></div>
-    <div class="day-info"><div class="day-title">Elie / Old Course?</div><div class="day-summary">OC attempt · Elie 11:40am if no OC</div></div>
-    <span class="day-badge badge-oc">OC?</span><span class="chevron">▾</span>
+    <div class="day-info"><div class="day-title">Elie / Old Course?</div><div class="day-summary">Old Course ballot first. If not, the periscope starter at Elie, a blind first tee, and 16 par-fours along the Fife coast. Ship Inn after.</div></div>
+    <span class="day-badge badge-golf">Golf</span><span class="chevron">▾</span>
   </div>
   <div class="day-body">
     <div class="event" onclick="toggleEvent(event,this)">
@@ -306,7 +306,7 @@ main { max-width: 640px; margin: 0 auto; padding: 14px 14px 40px; }
 <div class="day-card" onclick="toggleDay(this)">
   <div class="day-header">
     <div class="day-date-block"><div class="day-weekday">Wed</div><div class="day-num">17</div><div class="day-mon">June</div></div>
-    <div class="day-info"><div class="day-title">Buffer / Old Course?</div><div class="day-summary">OC attempt · East Neuk if no golf</div></div>
+    <div class="day-info"><div class="day-title">Buffer / Old Course?</div><div class="day-summary">Second shot at the Old Course. If it doesn't land — harbours, fish & chips, the Secret Bunker, and the best free day in Fife.</div></div>
     <span class="day-badge badge-oc">OC?</span><span class="chevron">▾</span>
   </div>
   <div class="day-body">
@@ -338,7 +338,7 @@ main { max-width: 640px; margin: 0 auto; padding: 14px 14px 40px; }
 <div class="day-card" onclick="toggleDay(this)">
   <div class="day-header">
     <div class="day-date-block"><div class="day-weekday">Thu</div><div class="day-num">18</div><div class="day-mon">June</div></div>
-    <div class="day-info"><div class="day-title">Crail + The Peat Inn</div><div class="day-summary">OC attempt · Crail 2:30pm · Peat Inn 8:30pm</div></div>
+    <div class="day-info"><div class="day-title">Crail + The Peat Inn</div><div class="day-summary">Final Old Course attempt. If not, the oldest golf club minutes in the world at Crail. Either way — Michelin-starred dinner at The Peat Inn to close it.</div></div>
     <span class="day-badge badge-golf">Golf</span><span class="chevron">▾</span>
   </div>
   <div class="day-body">
@@ -368,7 +368,7 @@ main { max-width: 640px; margin: 0 auto; padding: 14px 14px 40px; }
 <div class="day-card" onclick="toggleDay(this)">
   <div class="day-header">
     <div class="day-date-block"><div class="day-weekday">Fri</div><div class="day-num">19</div><div class="day-mon">June</div></div>
-    <div class="day-info"><div class="day-title">Kingsbarns + Distillery</div><div class="day-summary">Doug, Scott & Larry · 9:30am · Photo caddie · Community Inn · 4pm</div></div>
+    <div class="day-info"><div class="day-title">Kingsbarns + Distillery</div><div class="day-summary">The big one. Kingsbarns with a photo caddie — Larry doesn't know. North Sea on every hole, the Napoleonic bridge on 18, whisky in the village, then the distillery.</div></div>
     <span class="day-badge badge-golf">Golf</span><span class="chevron">▾</span>
   </div>
   <div class="day-body">
@@ -406,7 +406,7 @@ main { max-width: 640px; margin: 0 auto; padding: 14px 14px 40px; }
 <div class="day-card" onclick="toggleDay(this)">
   <div class="day-header">
     <div class="day-date-block"><div class="day-weekday">Sat</div><div class="day-num">20</div><div class="day-mon">June</div></div>
-    <div class="day-info"><div class="day-title">Fly Home</div><div class="day-summary">Depart 8am · AA279 11:35am → PHL 6:55pm</div></div>
+    <div class="day-info"><div class="day-title">Fly Home</div><div class="day-summary">Wheels up. Leave St Andrews by 8am, return the car, and carry everything home.</div></div>
     <span class="day-badge badge-travel">Travel</span><span class="chevron">▾</span>
   </div>
   <div class="day-body">
@@ -1101,7 +1101,7 @@ function toggleEvent(e,el){
   el.classList.toggle('open');
 }
 // Open first card by default
-document.querySelector('#itinerary .day-card').classList.add('open');
+// all days start collapsed
 </script>
 </body>
 </html>
