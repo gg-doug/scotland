@@ -710,13 +710,13 @@ main { max-width: 640px; margin: 0 auto; padding: 14px 14px 40px; }
 <!-- ══════════ MAPS ══════════ -->
 <div id="maps" class="view">
 
-<p style="font-size:13px;color:var(--ink-light);margin-bottom:16px;">Tap any pin or row to open in Google Maps for navigation.</p>
+<p style="font-size:13px;color:var(--ink-light);margin-bottom:16px;">Each map shows the route between stops. Tap any row to open navigation.</p>
 
 <style>
 .map-section { background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow); margin-bottom:20px; overflow:hidden; }
 .map-section-header { background:var(--green); padding:10px 14px; display:flex; align-items:center; justify-content:space-between; }
 .map-section-title { font-family:"Playfair Display",serif; font-size:15px; color:var(--white); font-weight:700; }
-.map-canvas { height:260px; width:100%; border:none; display:block; }
+.map-canvas { height:280px; width:100%; border:none; display:block; }
 .map-note { font-size:11px; color:var(--ink-light); padding:8px 14px 4px; line-height:1.5; }
 .map-row { display:flex; align-items:flex-start; gap:9px; padding:9px 14px; border-top:1px solid #f0ede5; text-decoration:none; }
 .map-row-emoji { font-size:16px; flex-shrink:0; margin-top:1px; }
@@ -726,174 +726,279 @@ main { max-width: 640px; margin: 0 auto; padding: 14px 14px 40px; }
 .map-row-tag { font-size:10px; padding:2px 7px; border-radius:10px; white-space:nowrap; flex-shrink:0; margin-top:2px; }
 </style>
 
-<!-- EDINBURGH -->
 <div class="map-section">
   <div class="map-section-header">
     <span class="map-section-title">Edinburgh — Saturday June 13</span>
     <span class="cal-day-badge badge-travel">1 night</span>
   </div>
-  <iframe class="map-canvas" loading="lazy"
-    src="https://www.openstreetmap.org/export/embed.html?bbox=-3.2200%2C55.9420%2C-3.1700%2C55.9600&layer=mapnik&marker=55.9499%2C-3.1909"
-    title="Edinburgh map"></iframe>
-  <div class="map-note">Old Town Chambers → The Witchery: 4-min walk &nbsp;·&nbsp; Witchery → Panda & Sons: 10-min walk north</div>
-  <a href="https://maps.google.com/?q=55.9499399,-3.1908589" target="_blank" class="map-row">
+  <iframe class="map-canvas" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+    src="https://www.google.com/maps/embed?pb=!1m52!1m12!1m3!1d4488.2!2d-3.19!3d55.950!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m37!3e2!4m5!1s0x4887c79a491e70c7%3A0xefde37a8ab44b8f3!2sOld+Town+Chambers+329+High+St+Edinburgh!3m2!1d55.9499!2d-3.1909!4m5!1s0x4887c79a9a5e1c43%3A0x21114d6f9e5e7fab!2sThe+Witchery+352+Castlehill+Edinburgh!3m2!1d55.9488!2d-3.1956!4m5!1s0x4887c7bbcbb2cb73%3A0x35befd3fd213891b!2sPanda+%26+Sons+79+Queen+St+Edinburgh!3m2!1d55.9532!2d-3.2069!4m5!1s0x4887c799cb2def43%3A0xa2adc86f5da1b2d8!2sWaverley+APCOA+Car+Park+Edinburgh!3m2!1d55.9497!2d-3.1880!5e0!3m2!1sen!2suk!4v1"
+    title="Edinburgh — Saturday June 13"></iframe>
+  <div class="map-note">Old Town Chambers → Witchery: 4-min walk · Witchery → Panda & Sons: 10-min walk north</div>
+  <a href="https://maps.google.com/?q=55.9499,-3.1909" target="_blank" class="map-row">
     <span class="map-row-emoji">🏨</span>
     <div class="map-row-info"><div class="map-row-name">Old Town Chambers</div><div class="map-row-addr">329 High St, EH1 1PN</div></div>
     <span class="map-row-tag tag-locked">Stay</span>
   </a>
-  <a href="https://maps.google.com/?q=55.9487885,-3.1956276" target="_blank" class="map-row">
+  <a href="https://maps.google.com/?q=55.9488,-3.1956" target="_blank" class="map-row">
     <span class="map-row-emoji">🍽️</span>
-    <div class="map-row-info"><div class="map-row-name">The Witchery, Secret Garden</div><div class="map-row-addr">352 Castlehill, EH1 2NF — 5:00pm booked</div></div>
+    <div class="map-row-info"><div class="map-row-name">The Witchery, Secret Garden</div><div class="map-row-addr">352 Castlehill, EH1 2NF — 5pm booked</div></div>
     <span class="map-row-tag tag-booked">Dinner</span>
   </a>
-  <a href="https://maps.google.com/?q=55.9532489,-3.2069456" target="_blank" class="map-row">
+  <a href="https://maps.google.com/?q=55.9532,-3.2069" target="_blank" class="map-row">
     <span class="map-row-emoji">🍸</span>
     <div class="map-row-info"><div class="map-row-name">Panda & Sons</div><div class="map-row-addr">79 Queen St, EH2 4NF — 7:30pm booked</div></div>
     <span class="map-row-tag tag-booked">Drinks</span>
   </a>
-  <a href="https://maps.google.com/?q=55.9497,-3.1880" target="_blank" class="map-row">
+  <a href="https://maps.google.com/?q=55.9497,-3.188" target="_blank" class="map-row">
     <span class="map-row-emoji">🅿️</span>
     <div class="map-row-info"><div class="map-row-name">Waverley APCOA Car Park</div><div class="map-row-addr">Market St, EH8 8DX — validate at hotel for 20% off</div></div>
     <span class="map-row-tag tag-note">Park here</span>
   </a>
 </div>
-
-<!-- ST ANDREWS -->
 <div class="map-section">
   <div class="map-section-header">
-    <span class="map-section-title">St Andrews — Base Camp</span>
-    <span class="cal-day-badge badge-golf">Sun–Fri</span>
+    <span class="map-section-title">Sunday Drive — Edinburgh → St Andrews</span>
+    <span class="cal-day-badge badge-travel">~1.5 hrs</span>
   </div>
-  <iframe class="map-canvas" loading="lazy"
-    src="https://www.openstreetmap.org/export/embed.html?bbox=-2.8300%2C56.3300%2C-2.7800%2C56.3550&layer=mapnik&marker=56.3427%2C-2.8057"
-    title="St Andrews map"></iframe>
-  <div class="map-note">Apartment is a 2-min walk from the 1st tee and 18th green of the Old Course</div>
-  <a href="https://maps.google.com/?q=56.3426982,-2.8056734" target="_blank" class="map-row">
+  <iframe class="map-canvas" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+    src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d220000!2d-3.0!3d56.1!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m3!3m2!1d55.9499!2d-3.1909!4m3!3m2!1d56.0060!2d-3.3781!4m3!3m2!1d56.3427!2d-2.8057!5e0!3m2!1sen!2suk!4v1"
+    title="Sunday Drive — Edinburgh → St Andrews"></iframe>
+  <div class="map-note">Cross the Forth Road Bridge — pull over on the Fife side for the iconic Forth Rail Bridge photo. Route: A90 → A92 → A91</div>
+  <a href="https://maps.google.com/?q=55.9499,-3.1909" target="_blank" class="map-row">
+    <span class="map-row-emoji">🏨</span>
+    <div class="map-row-info"><div class="map-row-name">Old Town Chambers, Edinburgh</div><div class="map-row-addr">Depart Sunday morning</div></div>
+    <span class="map-row-tag tag-locked">Start</span>
+  </a>
+  <a href="https://maps.google.com/?q=56.006,-3.3781" target="_blank" class="map-row">
+    <span class="map-row-emoji">🌉</span>
+    <div class="map-row-info"><div class="map-row-name">Forth Road Bridge</div><div class="map-row-addr">Pull over on the Fife side for a photo</div></div>
+    <span class="map-row-tag tag-note">Stop</span>
+  </a>
+  <a href="https://maps.google.com/?q=56.3427,-2.8057" target="_blank" class="map-row">
+    <span class="map-row-emoji">🏠</span>
+    <div class="map-row-info"><div class="map-row-name">Stay on the 18th, St Andrews</div><div class="map-row-addr">1A Gibson Pl, KY16 9JE</div></div>
+    <span class="map-row-tag tag-locked">Arrive</span>
+  </a>
+</div>
+<div class="map-section">
+  <div class="map-section-header">
+    <span class="map-section-title">St Andrews — Town & Old Course</span>
+    <span class="cal-day-badge badge-golf">Home base</span>
+  </div>
+  <iframe class="map-canvas" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+    src="https://www.google.com/maps/embed?pb=!1m40!1m12!1m3!1d3500!2d-2.806!3d56.343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m25!3e2!4m5!1s0x48879282a6d7c2ef%3A0xe8a7dfc9c967b769!2s1A+Gibson+Pl+St+Andrews!3m2!1d56.3427!2d-2.8057!4m5!1s0x48879284841758cd%3A0x74b8de7769def4b4!2sOld+Course+St+Andrews!3m2!1d56.3437!2d-2.8023!4m5!1s0x48879284bc6f98e3%3A0xa3b3ecf040ee2c6a!2sRusacks+Hotel+St+Andrews!3m2!1d56.3424!2d-2.8043!5e0!3m2!1sen!2suk!4v1"
+    title="St Andrews — Town & Old Course"></iframe>
+  <div class="map-note">Apartment → Old Course 1st tee: 2-min walk · Apartment → Rusacks: 3-min walk</div>
+  <a href="https://maps.google.com/?q=56.3427,-2.8057" target="_blank" class="map-row">
     <span class="map-row-emoji">🏠</span>
     <div class="map-row-info"><div class="map-row-name">Stay on the 18th Apartment</div><div class="map-row-addr">1A Gibson Pl, KY16 9JE</div></div>
-    <span class="map-row-tag tag-locked">Home base</span>
+    <span class="map-row-tag tag-locked">Home</span>
   </a>
-  <a href="https://maps.google.com/?q=56.343652,-2.8022784" target="_blank" class="map-row">
+  <a href="https://maps.google.com/?q=56.3437,-2.8023" target="_blank" class="map-row">
     <span class="map-row-emoji">⛳</span>
-    <div class="map-row-info"><div class="map-row-name">Old Course, St Andrews</div><div class="map-row-addr">W Sands Rd, KY16 9XL — ballot Tue/Wed/Thu</div></div>
+    <div class="map-row-info"><div class="map-row-name">Old Course — 1st Tee / 18th Green</div><div class="map-row-addr">W Sands Rd, KY16 9XL — ballot Tue/Wed/Thu</div></div>
     <span class="map-row-tag tag-tentative">Pursuing</span>
   </a>
-  <a href="https://maps.google.com/?q=56.342419,-2.8042567" target="_blank" class="map-row">
+  <a href="https://maps.google.com/?q=56.3424,-2.8043" target="_blank" class="map-row">
     <span class="map-row-emoji">🍽️</span>
-    <div class="map-row-info"><div class="map-row-name">Rusacks — Restaurant 18</div><div class="map-row-addr">16 Pilmour Links, KY16 9JQ — Sun 6pm booked</div></div>
+    <div class="map-row-info"><div class="map-row-name">Rusacks — Restaurant 18</div><div class="map-row-addr">16 Pilmour Links, KY16 9JQ — Sun 6pm</div></div>
     <span class="map-row-tag tag-booked">Dinner Sun</span>
   </a>
-  <a href="https://maps.google.com/?q=56.278296,-2.884629" target="_blank" class="map-row">
-    <span class="map-row-emoji">🍽️</span>
-    <div class="map-row-info"><div class="map-row-name">The Peat Inn</div><div class="map-row-addr">Cupar, KY15 5LH — Thu 8:30pm booked</div></div>
-    <span class="map-row-tag tag-booked">Dinner Thu</span>
-  </a>
 </div>
-
-<!-- FIVE COURSES -->
 <div class="map-section">
   <div class="map-section-header">
-    <span class="map-section-title">⛳ The Five Courses</span>
-    <span class="cal-day-badge badge-golf">Mon–Fri</span>
+    <span class="map-section-title">Monday — St Andrews → Carnoustie</span>
+    <span class="cal-day-badge badge-golf">Mon June 15</span>
   </div>
-  <iframe class="map-canvas" loading="lazy"
-    src="https://www.openstreetmap.org/export/embed.html?bbox=-2.9500%2C56.1500%2C-2.5500%2C56.5500&layer=mapnik"
-    title="Five courses map"></iframe>
-  <div class="map-note">Carnoustie ~45 min north · All East Neuk courses within 30 min of the apartment</div>
-  <a href="https://maps.google.com/?q=56.4963621,-2.7162482" target="_blank" class="map-row">
-    <span class="map-row-emoji">🏌️</span>
-    <div class="map-row-info"><div class="map-row-name">Carnoustie Championship</div><div class="map-row-addr">Links Parade, DD7 7JE — Mon 3:30pm</div></div>
+  <iframe class="map-canvas" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+    src="https://www.google.com/maps/embed?pb=!1m24!1m12!1m3!1d80000!2d-2.76!3d56.42!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m9!3e0!4m3!3m2!1d56.3427!2d-2.8057!4m3!3m2!1d56.4964!2d-2.7162!5e0!3m2!1sen!2suk!4v1"
+    title="Monday — St Andrews → Carnoustie"></iframe>
+  <div class="map-note">~45 min north via A91 → A92 across Tay Bridge into Angus</div>
+  <a href="https://maps.google.com/?q=56.3427,-2.8057" target="_blank" class="map-row">
+    <span class="map-row-emoji">🏠</span>
+    <div class="map-row-info"><div class="map-row-name">Apartment, St Andrews</div><div class="map-row-addr">Depart ~11:00am</div></div>
+    <span class="map-row-tag tag-note">Start</span>
+  </a>
+  <a href="https://maps.google.com/?q=56.4964,-2.7167" target="_blank" class="map-row">
+    <span class="map-row-emoji">🍽️</span>
+    <div class="map-row-info"><div class="map-row-name">The Rookery, Carnoustie</div><div class="map-row-addr">Links House, DD7 7JE — lunch 12pm booked</div></div>
+    <span class="map-row-tag tag-booked">Lunch</span>
+  </a>
+  <a href="https://maps.google.com/?q=56.4964,-2.7162" target="_blank" class="map-row">
+    <span class="map-row-emoji">⛳</span>
+    <div class="map-row-info"><div class="map-row-name">Carnoustie Championship Course</div><div class="map-row-addr">Links Parade, DD7 7JE — tee time 3:30pm</div></div>
+    <span class="map-row-tag tag-locked">Golf</span>
+  </a>
+</div>
+<div class="map-section">
+  <div class="map-section-header">
+    <span class="map-section-title">Tuesday — St Andrews → Elie</span>
+    <span class="cal-day-badge badge-golf">Tue June 16</span>
+  </div>
+  <iframe class="map-canvas" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+    src="https://www.google.com/maps/embed?pb=!1m24!1m12!1m3!1d80000!2d-2.82!3d56.26!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m9!3e0!4m3!3m2!1d56.3427!2d-2.8057!4m3!3m2!1d56.1917!2d-2.8293!5e0!3m2!1sen!2suk!4v1"
+    title="Tuesday — St Andrews → Elie"></iframe>
+  <div class="map-note">~25 min south on A917 coastal road (if no Old Course) · Elie 11:40am tee time</div>
+  <a href="https://maps.google.com/?q=56.3427,-2.8057" target="_blank" class="map-row">
+    <span class="map-row-emoji">🏠</span>
+    <div class="map-row-info"><div class="map-row-name">Apartment, St Andrews</div><div class="map-row-addr">Depart ~11:00am (if no OC)</div></div>
+    <span class="map-row-tag tag-note">Start</span>
+  </a>
+  <a href="https://maps.google.com/?q=56.1917,-2.8293" target="_blank" class="map-row">
+    <span class="map-row-emoji">⛳</span>
+    <div class="map-row-info"><div class="map-row-name">Elie Golf House Club</div><div class="map-row-addr">Golf Club Ln, KY9 1AS — tee time 11:40am</div></div>
+    <span class="map-row-tag tag-locked">Golf</span>
+  </a>
+  <a href="https://maps.google.com/?q=56.188,-2.821" target="_blank" class="map-row">
+    <span class="map-row-emoji">🍺</span>
+    <div class="map-row-info"><div class="map-row-name">Ship Inn, Elie</div><div class="map-row-addr">The Toft, Elie — post-round pint on the beach</div></div>
+    <span class="map-row-tag tag-note">Post-round</span>
+  </a>
+</div>
+<div class="map-section">
+  <div class="map-section-header">
+    <span class="map-section-title">Thursday — St Andrews → Crail</span>
+    <span class="cal-day-badge badge-golf">Thu June 18</span>
+  </div>
+  <iframe class="map-canvas" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+    src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d90000!2d-2.71!3d56.31!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m3!3m2!1d56.3427!2d-2.8057!4m3!3m2!1d56.2807!2d-2.5946!4m3!3m2!1d56.2783!2d-2.8846!5e0!3m2!1sen!2suk!4v1"
+    title="Thursday — St Andrews → Crail"></iframe>
+  <div class="map-note">Crail ~30 min east on A917 (if no Old Course) · Peat Inn ~15 min from St Andrews</div>
+  <a href="https://maps.google.com/?q=56.3427,-2.8057" target="_blank" class="map-row">
+    <span class="map-row-emoji">🏠</span>
+    <div class="map-row-info"><div class="map-row-name">Apartment, St Andrews</div><div class="map-row-addr">Depart ~2:00pm (if no OC)</div></div>
+    <span class="map-row-tag tag-note">Start</span>
+  </a>
+  <a href="https://maps.google.com/?q=56.2807,-2.5946" target="_blank" class="map-row">
+    <span class="map-row-emoji">⛳</span>
+    <div class="map-row-info"><div class="map-row-name">Crail Golfing Society</div><div class="map-row-addr">Balcomie, KY10 3XN — tee time 2:30pm</div></div>
+    <span class="map-row-tag tag-locked">Golf</span>
+  </a>
+  <a href="https://maps.google.com/?q=56.2783,-2.8846" target="_blank" class="map-row">
+    <span class="map-row-emoji">🍽️</span>
+    <div class="map-row-info"><div class="map-row-name">The Peat Inn</div><div class="map-row-addr">Cupar, KY15 5LH — dinner 8:30pm booked</div></div>
+    <span class="map-row-tag tag-booked">Dinner</span>
+  </a>
+</div>
+<div class="map-section">
+  <div class="map-section-header">
+    <span class="map-section-title">Friday — St Andrews → Kingsbarns</span>
+    <span class="cal-day-badge badge-golf">Fri June 19</span>
+  </div>
+  <iframe class="map-canvas" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+    src="https://www.google.com/maps/embed?pb=!1m32!1m12!1m3!1d40000!2d-2.73!3d56.315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m17!3e0!4m3!3m2!1d56.3427!2d-2.8057!4m3!3m2!1d56.2986!2d-2.6462!4m3!3m2!1d56.2875!2d-2.6425!5e0!3m2!1sen!2suk!4v1"
+    title="Friday — St Andrews → Kingsbarns"></iframe>
+  <div class="map-note">~15 min east on A917 · Golf 9:30am · Community Inn ~3pm · Distillery 4pm</div>
+  <a href="https://maps.google.com/?q=56.3427,-2.8057" target="_blank" class="map-row">
+    <span class="map-row-emoji">🏠</span>
+    <div class="map-row-info"><div class="map-row-name">Apartment, St Andrews</div><div class="map-row-addr">Depart ~9:00am</div></div>
+    <span class="map-row-tag tag-note">Start</span>
+  </a>
+  <a href="https://maps.google.com/?q=56.2986,-2.6462" target="_blank" class="map-row">
+    <span class="map-row-emoji">⛳</span>
+    <div class="map-row-info"><div class="map-row-name">Kingsbarns Golf Links</div><div class="map-row-addr">Back Stile, KY16 8QD — tee time 9:30am</div></div>
+    <span class="map-row-tag tag-locked">Golf</span>
+  </a>
+  <a href="https://maps.google.com/?q=56.292,-2.652" target="_blank" class="map-row">
+    <span class="map-row-emoji">🍺</span>
+    <div class="map-row-info"><div class="map-row-name">Kingsbarns Community Inn</div><div class="map-row-addr">Kingsbarns village — ~3pm</div></div>
+    <span class="map-row-tag tag-locked">Pub</span>
+  </a>
+  <a href="https://maps.google.com/?q=56.2875,-2.6425" target="_blank" class="map-row">
+    <span class="map-row-emoji">🥃</span>
+    <div class="map-row-info"><div class="map-row-name">Kingsbarns Distillery</div><div class="map-row-addr">East Newall Farm, KY16 8QE — 4pm booked</div></div>
+    <span class="map-row-tag tag-booked">Distillery</span>
+  </a>
+</div>
+<div class="map-section">
+  <div class="map-section-header">
+    <span class="map-section-title">East Neuk — All Courses & Key Stops</span>
+    <span class="cal-day-badge badge-golf">Full week</span>
+  </div>
+  <iframe class="map-canvas" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+    src="https://www.google.com/maps/embed?pb=!1m52!1m12!1m3!1d160000!2d-2.72!3d56.30!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m37!3e0!4m3!3m2!1d56.4964!2d-2.7162!4m3!3m2!1d56.3437!2d-2.8023!4m3!3m2!1d56.3427!2d-2.8057!4m3!3m2!1d56.2783!2d-2.8846!4m3!3m2!1d56.2807!2d-2.5946!4m3!3m2!1d56.2986!2d-2.6462!4m3!3m2!1d56.1917!2d-2.8293!5e0!3m2!1sen!2suk!4v1"
+    title="East Neuk — All Courses & Key Stops"></iframe>
+  <div class="map-note">Full trip overview — Carnoustie to Elie, all five courses and key stops plotted</div>
+  <a href="https://maps.google.com/?q=56.4964,-2.7162" target="_blank" class="map-row">
+    <span class="map-row-emoji">⛳</span>
+    <div class="map-row-info"><div class="map-row-name">Carnoustie</div><div class="map-row-addr">DD7 7JE — Mon</div></div>
     <span class="map-row-tag tag-locked">Mon</span>
   </a>
-  <a href="https://maps.google.com/?q=56.191674,-2.829256" target="_blank" class="map-row">
-    <span class="map-row-emoji">🏌️</span>
-    <div class="map-row-info"><div class="map-row-name">Elie Golf House Club</div><div class="map-row-addr">Golf Club Ln, KY9 1AS — Tue 11:40am (if no OC)</div></div>
-    <span class="map-row-tag tag-locked">Tue</span>
-  </a>
-  <a href="https://maps.google.com/?q=56.343652,-2.8022784" target="_blank" class="map-row">
+  <a href="https://maps.google.com/?q=56.3437,-2.8023" target="_blank" class="map-row">
     <span class="map-row-emoji">⛳</span>
-    <div class="map-row-info"><div class="map-row-name">Old Course, St Andrews</div><div class="map-row-addr">W Sands Rd, KY16 9XL — Tue/Wed/Thu ballot</div></div>
-    <span class="map-row-tag tag-tentative">Pursuing</span>
+    <div class="map-row-info"><div class="map-row-name">Old Course</div><div class="map-row-addr">KY16 9XL — Tue/Wed/Thu</div></div>
+    <span class="map-row-tag tag-tentative">OC?</span>
   </a>
-  <a href="https://maps.google.com/?q=56.2806985,-2.5945722" target="_blank" class="map-row">
-    <span class="map-row-emoji">🏌️</span>
-    <div class="map-row-info"><div class="map-row-name">Crail Golfing Society</div><div class="map-row-addr">Balcomie, KY10 3XN — Thu 2:30pm (if no OC)</div></div>
+  <a href="https://maps.google.com/?q=56.3427,-2.8057" target="_blank" class="map-row">
+    <span class="map-row-emoji">🏠</span>
+    <div class="map-row-info"><div class="map-row-name">St Andrews Apartment</div><div class="map-row-addr">KY16 9JE — base</div></div>
+    <span class="map-row-tag tag-locked">Home</span>
+  </a>
+  <a href="https://maps.google.com/?q=56.2783,-2.8846" target="_blank" class="map-row">
+    <span class="map-row-emoji">🍽️</span>
+    <div class="map-row-info"><div class="map-row-name">The Peat Inn</div><div class="map-row-addr">KY15 5LH — Thu dinner</div></div>
+    <span class="map-row-tag tag-booked">Thu</span>
+  </a>
+  <a href="https://maps.google.com/?q=56.2807,-2.5946" target="_blank" class="map-row">
+    <span class="map-row-emoji">⛳</span>
+    <div class="map-row-info"><div class="map-row-name">Crail</div><div class="map-row-addr">KY10 3XN — Thu</div></div>
     <span class="map-row-tag tag-locked">Thu</span>
   </a>
-  <a href="https://maps.google.com/?q=56.2986285,-2.6461672" target="_blank" class="map-row">
-    <span class="map-row-emoji">🏌️</span>
-    <div class="map-row-info"><div class="map-row-name">Kingsbarns Golf Links</div><div class="map-row-addr">Back Stile, KY16 8QD — Fri 9:30am</div></div>
+  <a href="https://maps.google.com/?q=56.2986,-2.6462" target="_blank" class="map-row">
+    <span class="map-row-emoji">⛳</span>
+    <div class="map-row-info"><div class="map-row-name">Kingsbarns</div><div class="map-row-addr">KY16 8QD — Fri</div></div>
     <span class="map-row-tag tag-locked">Fri</span>
   </a>
-</div>
-
-<!-- FOOD & DRINK -->
-<div class="map-section">
-  <div class="map-section-header">
-    <span class="map-section-title">🍽️ Restaurants & Distilleries</span>
-    <span class="cal-day-badge badge-golf">All week</span>
-  </div>
-  <iframe class="map-canvas" loading="lazy"
-    src="https://www.openstreetmap.org/export/embed.html?bbox=-2.9500%2C56.1500%2C-2.5500%2C56.5500&layer=mapnik"
-    title="Food and drink map"></iframe>
-  <a href="https://maps.google.com/?q=56.496391,-2.716668" target="_blank" class="map-row">
-    <span class="map-row-emoji">🍽️</span>
-    <div class="map-row-info"><div class="map-row-name">The Rookery, Carnoustie</div><div class="map-row-addr">Links House, DD7 7JE — Mon 12pm booked</div></div>
-    <span class="map-row-tag tag-booked">Mon lunch</span>
-  </a>
-  <a href="https://maps.google.com/?q=56.278296,-2.884629" target="_blank" class="map-row">
-    <span class="map-row-emoji">🍽️</span>
-    <div class="map-row-info"><div class="map-row-name">The Peat Inn</div><div class="map-row-addr">Cupar, KY15 5LH — Thu 8:30pm booked</div></div>
-    <span class="map-row-tag tag-booked">Thu dinner</span>
-  </a>
-  <a href="https://maps.google.com/?q=56.2986285,-2.6461672" target="_blank" class="map-row">
-    <span class="map-row-emoji">🍽️</span>
-    <div class="map-row-info"><div class="map-row-name">Kingsbarns Clubhouse</div><div class="map-row-addr">Back Stile, KY16 8QD — Fri post-round</div></div>
-    <span class="map-row-tag tag-note">Fri lunch</span>
-  </a>
-  <a href="https://maps.google.com/?q=56.2875193,-2.6425179" target="_blank" class="map-row">
-    <span class="map-row-emoji">🥃</span>
-    <div class="map-row-info"><div class="map-row-name">Kingsbarns Distillery</div><div class="map-row-addr">East Newall Farm, KY16 8QE — Fri 4pm booked</div></div>
-    <span class="map-row-tag tag-booked">Fri 4pm</span>
+  <a href="https://maps.google.com/?q=56.1917,-2.8293" target="_blank" class="map-row">
+    <span class="map-row-emoji">⛳</span>
+    <div class="map-row-info"><div class="map-row-name">Elie</div><div class="map-row-addr">KY9 1AS — Tue</div></div>
+    <span class="map-row-tag tag-locked">Tue</span>
   </a>
 </div>
-
-<!-- DALWHINNIE -->
 <div class="map-section">
   <div class="map-section-header">
-    <span class="map-section-title">🥃 Dalwhinnie — Highlands Option</span>
-    <span class="cal-day-badge badge-oc">Wed if Highlands</span>
+    <span class="map-section-title">Wednesday — Highlands Option (Dalwhinnie)</span>
+    <span class="cal-day-badge badge-oc">If Wed goes Highlands</span>
   </div>
-  <iframe class="map-canvas" loading="lazy"
-    src="https://www.openstreetmap.org/export/embed.html?bbox=-4.3500%2C56.8500%2C-4.1000%2C57.0000&layer=mapnik&marker=56.9397%2C-4.2385"
-    title="Dalwhinnie map"></iframe>
-  <div class="map-note">~2 hrs north via A9 through Pitlochry and the Drumochter Pass. Scotland's highest distillery at 1,164ft.</div>
-  <a href="https://maps.google.com/?q=56.939652,-4.2385177" target="_blank" class="map-row">
+  <iframe class="map-canvas" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+    src="https://www.google.com/maps/embed?pb=!1m24!1m12!1m3!1d350000!2d-3.52!3d56.62!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m9!3e0!4m3!3m2!1d56.3427!2d-2.8057!4m3!3m2!1d56.9397!2d-4.2385!5e0!3m2!1sen!2suk!4v1"
+    title="Wednesday — Highlands Option (Dalwhinnie)"></iframe>
+  <div class="map-note">~2 hrs north via A91 → A9. Drumochter Pass is proper Highland scenery. Back by 6pm for The Peat Inn.</div>
+  <a href="https://maps.google.com/?q=56.3427,-2.8057" target="_blank" class="map-row">
+    <span class="map-row-emoji">🏠</span>
+    <div class="map-row-info"><div class="map-row-name">Apartment, St Andrews</div><div class="map-row-addr">Depart ~8:30am</div></div>
+    <span class="map-row-tag tag-note">Start</span>
+  </a>
+  <a href="https://maps.google.com/?q=56.9397,-4.2385" target="_blank" class="map-row">
     <span class="map-row-emoji">🥃</span>
     <div class="map-row-info"><div class="map-row-name">Dalwhinnie Distillery</div><div class="map-row-addr">General Wade's Military Rd, PH19 1AA</div></div>
-    <span class="map-row-tag tag-note">~2hrs from St Andrews</span>
+    <span class="map-row-tag tag-note">Destination</span>
   </a>
 </div>
-
-<!-- AIRPORT -->
 <div class="map-section">
   <div class="map-section-header">
-    <span class="map-section-title">✈️ Edinburgh Airport</span>
-    <span class="cal-day-badge badge-travel">June 13 & 20</span>
+    <span class="map-section-title">Saturday — St Andrews → Edinburgh Airport</span>
+    <span class="cal-day-badge badge-travel">Sat June 20</span>
   </div>
-  <iframe class="map-canvas" loading="lazy"
-    src="https://www.openstreetmap.org/export/embed.html?bbox=-3.3900%2C55.9350%2C-3.3300%2C55.9650&layer=mapnik&marker=55.9500%2C-3.3625"
-    title="Edinburgh Airport map"></iframe>
-  <div class="map-note">Car hire centre is a short covered walk from the terminal. All car parks cashless — card only.</div>
-  <a href="https://maps.google.com/?q=55.9500,-3.3625" target="_blank" class="map-row">
-    <span class="map-row-emoji">✈️</span>
-    <div class="map-row-info"><div class="map-row-name">Edinburgh Airport</div><div class="map-row-addr">EH12 9DN — AA279 departs 11:35am June 20</div></div>
-    <span class="map-row-tag tag-locked">Fly</span>
+  <iframe class="map-canvas" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+    src="https://www.google.com/maps/embed?pb=!1m24!1m12!1m3!1d220000!2d-3.1!3d56.15!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m9!3e0!4m3!3m2!1d56.3427!2d-2.8057!4m3!3m2!1d55.9500!2d-3.3625!5e0!3m2!1sen!2suk!4v1"
+    title="Saturday — St Andrews → Edinburgh Airport"></iframe>
+  <div class="map-note">Depart 8:00am · ~1.5 hrs · Return Enterprise car · Be at airport by 9:30am for 11:35am flight</div>
+  <a href="https://maps.google.com/?q=56.3427,-2.8057" target="_blank" class="map-row">
+    <span class="map-row-emoji">🏠</span>
+    <div class="map-row-info"><div class="map-row-name">Apartment, St Andrews</div><div class="map-row-addr">Depart 8:00am — checkout by 10am</div></div>
+    <span class="map-row-tag tag-locked">Start</span>
   </a>
   <a href="https://maps.google.com/?q=55.9503,-3.3611" target="_blank" class="map-row">
     <span class="map-row-emoji">🚗</span>
-    <div class="map-row-info"><div class="map-row-name">Enterprise Car Hire</div><div class="map-row-addr">Eastfield Rd, EH12 9DN — return by 9:30am June 20</div></div>
+    <div class="map-row-info"><div class="map-row-name">Enterprise Car Hire</div><div class="map-row-addr">Eastfield Rd, EH12 9DN — return car first</div></div>
     <span class="map-row-tag tag-note">Return car</span>
+  </a>
+  <a href="https://maps.google.com/?q=55.95,-3.3625" target="_blank" class="map-row">
+    <span class="map-row-emoji">✈️</span>
+    <div class="map-row-info"><div class="map-row-name">Edinburgh Airport</div><div class="map-row-addr">EH12 9DN — AA279 departs 11:35am</div></div>
+    <span class="map-row-tag tag-locked">Fly home</span>
   </a>
 </div>
 
